@@ -12,7 +12,7 @@ def register(request):
         form=RegisterForm(request.POST)
         if form.is_valid(): 
             form.save()
-            return redirect ('login')
+            return redirect ('login_page')
     return render(request,'users/register.html',{'form':form})
 
 def logout_view(request):
